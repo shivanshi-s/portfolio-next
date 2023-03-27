@@ -18,6 +18,7 @@ const Navbar = () => {
           <Image src="/../public/assets/navLogo.png" alt='/' 
             width='125' 
             height='50'
+            className='cursor-pointer'
             />
 
           <div>
