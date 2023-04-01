@@ -1,87 +1,55 @@
 import Link from 'next/link'
 import React from 'react'
-import { FaGithub, FaLinkedin, FaMedium, FaTwitter } from 'react-icons/fa'
-import { HiOutlineChevronDoubleUp } from 'react-icons/hi'
+import { FaFacebook, FaTwitter, FaInstagram, FaEnvelope, FaLinkedin, FaGithub, FaBlog, FaMicroblog, FaMedium } from 'react-icons/fa';
+import { SiHashnode } from 'react-icons/si'
+
+
+const SocialIcons = () => {
+    return (
+      <div className="flex flex-wrap md:flex-nowrap space-x-4">
+        <a href="#">
+          <FaGithub className="m-6 text-[#5651e5]" size={60} />
+        </a>
+        <a href="#">
+          <FaTwitter className="m-6 text-[#5651e5]" size={60} />
+        </a>
+        <a href="#">
+          <FaLinkedin className="m-6 text-[#5651e5]" size={60} />
+        </a>
+        <a href="#">
+          <SiHashnode className="m-6 text-[#5651e5]" size={60} />
+        </a>
+        <a href="#">
+          <FaMedium className="m-6 text-[#5651e5]" size={60} />
+        </a>
+      </div>
+    );
+  };
 
 const Contact = () => {
   return (
     <div id='contact' className='w-full lg:h-screen'>
-        <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
+        <div className='max-w-[1240px] m-auto px-2 py-20 w-full'>
             <p className='text-xl tracking-widest uppercase text-[#5651e5]'>Contact</p>
             <h2 className='py-4'>Get in Touch</h2>
-          <div className='grid lg:grid-cols-5 gap-8'>
-            {/* left */}
-            <div className='cols-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
-                <div className='lg:p-4 h-full'>
-                    <div>
-                        <img className='rounded-xl hover:scale-105 ease-in duration-300' src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="/" />
-                    </div>
-                    <div>
-                        <h2 className='py-2'>Shivanshi Saxena</h2>
-                        <p>Front-End Developer</p>
-                        <p className='py-4'>I am for freelance and internship positions. Contact me and let's talk!</p>
-                    </div>
-                    <div>
-                        <p className='uppercase pt-8'>Connect with me</p>
-                        <div className='flex items-center justify-between py-4'>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                <FaLinkedin/>
-                            </div>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                <FaGithub/>
-                            </div>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                <FaTwitter/>
-                            </div>
-                            <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                <FaMedium/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div className="bg-gradient-to-r from-gray-100 to-purple-100 flex justify-center items-center h-[70vh]">
+            <div className="w-full max-w-4xl h-full p-8 md:p-16">
+            <h2 className="text-3xl md:text-4xl font-bold  mb-4">
+                Want to work together?
+            </h2>
+            <p className="text-[#5651e5] pt-5 pb-10">
+                I'm open to internship positons and freelance work. Feel free to reach out for collaborations, get help with communities or just a friendly hello!
+                </p>
+
+            <SocialIcons />
+            
+            <button className=" text-white px-6 py-2 rounded-md mt-6 ml-3">
+                <FaEnvelope className="inline-block m-2" size={18} />
+                   <a href=""></a> DROP A MAIL
+            </button>
+            </div>
             </div>
 
-            {/* right side */}
-            <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
-                <div className='p-4'>
-                    <form>
-                        <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
-                        <div className='flex flex-col'>
-                            <label className='uppercase text-sm'>Name</label>
-                            <input className='border-2 rounded-lg p-3 flex border-gray-300' type="text" />
-                        </div>
-                        <div className='flex flex-col'>
-                            <label className='uppercase text-sm'>Phone Number</label>
-                            <input className='border-2 rounded-lg p-3 flex border-gray-300' type="text" />
-                        </div>
-                        </div>
-
-                        <div className='flex flex-col py-2'>
-                            <label className='uppercase text-sm'>Email</label>
-                            <input className='border-2 rounded-lg p-3 flex border-gray-300' type="email" />
-                        </div>
-                        <div className='flex flex-col py-2'>
-                            <label className='uppercase text-sm'>Subject</label>
-                            <input className='border-2 rounded-lg p-3 flex border-gray-300' type="text" />
-                        </div>
-                        <div className='flex flex-col py-2'>
-                            <label className='uppercase text-sm'>Message</label>
-                            <textarea className='border-2 rounded-lg p-3 border-gray-300' rows='10' />
-                        </div>
-
-                        <button className='w-full p-4 text-gray-100 mt-4'>Send Message</button>
-                    </form>
-                </div>
-            </div>
-          </div>
-
-          <div className='flex justify-center py-12'>
-            <Link href='/'>
-                <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
-                    <HiOutlineChevronDoubleUp className='text-[#5651e5]' size={30} />
-                </div>
-            </Link>
-          </div>
         </div>
     </div>
   )
