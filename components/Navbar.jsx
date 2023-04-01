@@ -1,41 +1,77 @@
-import React , {useState} from 'react'
+import React , {useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
+import { useRouter } from 'next/router'
 
 const Navbar = () => {
 
   const [nav, setNav] = useState(false)
+  const [shadow, setShadow] = useState(false)
+  const [navBg ,setNavBg] = useState('#ECF0F3')
+  const [linkColor, setLinkColor] = useState('#1f2937')
+  const router = useRouter()
+
   const handleNav = () => {
     setNav(!nav)
   }
 
+  useEffect( () => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90 ) {
+        setShadow(true)
+      } else {
+        setShadow(false)
+      }
+    }
+    window.addEventListener('scroll', handleShadow);
+  },[])
+
+  useEffect( () => {
+    if (
+      router.asPath === '/projectOne' ||
+      router.asPath === '/projectTwo' ||
+      router.asPath === '/projectThree' ||
+      router.asPath === '/projectFour'
+    ) {
+      setNavBg('transparent')
+      setLinkColor('#ecf0f3')
+    } else {
+      setNavBg('#ecf0f3')
+      setLinkColor('#1f2937')
+    }
+  },[router])
+
   return (
-    <div className='fixed w-full h-20 shadow-xl z-[100]'>
+    <div 
+        style={{backgroundColor : `${navBg}`}}
+         className={shadow ? 'fixed w-full h-20 shadow-xl z-[100]' : 'fixed w-full h-20 z-[100]'}>
         <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
+          <Link href='/'>
           <Image src="/../public/assets/navLogo.png" alt='/' 
             width='125' 
             height='50'
             className='cursor-pointer'
             />
+            </Link>
 
           <div>
-            <ul className='hidden md:flex '>
-              <Link href='/'>
+            <ul style={{color:`${linkColor}`}} className='hidden md:flex '>
+              <Link href=''>
                   <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
               </Link>
-              <Link href='/'>
+              <Link href='/#about'>
                   <li className='ml-10 text-sm uppercase hover:border-b'>About</li>
               </Link>
-              <Link href='/'>
+              <Link href='/#skills'>
                   <li className='ml-10 text-sm uppercase hover:border-b'>skills</li>
               </Link>
-              <Link href='/'>
+              <Link href='/#projects'>
                   <li className='ml-10 text-sm uppercase hover:border-b'>Project</li>
               </Link>
-              <Link href='/'>
+              <Link href='/#contact'>
                   <li className='ml-10 text-sm uppercase hover:border-b'>Contact</li>
               </Link>
             </ul>
@@ -50,7 +86,10 @@ const Navbar = () => {
           <div className={nav ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500' : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'}>
               <div>
                   <div className='flex w-full items-center justify-between'>
-                      <Image src="/../public/assets/navLogo.png" alt="logo" width={87} height={35} />
+                      <Link href='/'>
+                        <Image src="/../public/assets/navLogo.png" alt="logo" width={87} height={35} />
+                      </Link>
+                      
                       <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 cursor-pointer p-3'>
                         <AiOutlineClose />
                       </div>
@@ -64,19 +103,19 @@ const Navbar = () => {
               <div className='py-4 flex flex-col'>
                 <ul className='uppercase'>
                   <Link href='/'>
-                      <li className='py-4 text-sm'>Home</li>
+                      <li onClick={() => setNav(false) } className='py-4 text-sm'>Home</li>
                   </Link>
-                  <Link href='/'>
-                      <li className='py-4 text-sm'>About</li>
+                  <Link href='/#about'>
+                      <li onClick={() => setNav(false) } className='py-4 text-sm'>About</li>
                   </Link>
-                  <Link href='/'>
-                      <li className='py-4 text-sm'>Skills</li>
+                  <Link href='/#skills'>
+                      <li onClick={() => setNav(false) } className='py-4 text-sm'>Skills</li>
                   </Link>
-                  <Link href='/'>
-                      <li className='py-4 text-sm'>Projects</li>
+                  <Link href='/#projects'>
+                      <li onClick={() => setNav(false) } className='py-4 text-sm'>Projects</li>
                   </Link>
-                  <Link href='/'>
-                      <li className='py-4 text-sm'>Contact</li>
+                  <Link href='/contact'>
+                      <li onClick={() => setNav(false) } className='py-4 text-sm'>Contact</li>
                   </Link>
                 </ul>
                 <div className='pt-40'>
