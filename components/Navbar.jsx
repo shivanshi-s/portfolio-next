@@ -2,7 +2,7 @@ import React , {useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai'
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
+import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { useRouter } from 'next/router'
 
@@ -122,16 +122,16 @@ const Navbar = () => {
                     <p className='uppercase tracking-widest text-[#5651e5]'>Let's Connect!</p>
                     <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                         <div className='rounded-full shadow-lg shadow-gray-300 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                            <FaLinkedinIn/>
+                            <a href="https://www.linkedin.com/in/shivanshi-saxena12/" target='_blank'><FaLinkedinIn/></a>
                         </div>
                         <div className='rounded-full shadow-lg shadow-gray-300 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                            <FaGithub/>
+                            <a href="https://www.github.com/shivanshi-s/" target='_blank'><FaGithub/></a>
                         </div>
                         <div className='rounded-full shadow-lg shadow-gray-300 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                            <AiOutlineMail/>
+                            <a href="mailto:shivanshi.saxena2@gmail.com" target='_blank'><AiOutlineMail/></a>
                         </div>
                         <div className='rounded-full shadow-lg shadow-gray-300 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                            <BsFillPersonLinesFill/>
+                            <a href="https://twitter.com/whatshivanshi" target='_blank'><FaTwitter/></a>
                         </div>
                     </div>
                 </div>

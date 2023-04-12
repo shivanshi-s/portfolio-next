@@ -14,7 +14,7 @@ const About = () => {
           <h2 className='py-4'>Who I Am</h2>
           <p className='py-2 text-gray-600'>
             I specialize in building mobile responsive front-end UI applications
-            that connect with API’s and other backend technologies. I’m
+            and I’m
             passionate about learning new technologies and understand there is
             more than one way to accomplish a task. Though I am most proficient
             in building front-end applications using HTML, CSS, Javascript, and
@@ -23,12 +23,10 @@ const About = () => {
             specific language, but choosing the best tool for the job.
           </p>
           <p className='py-2 text-gray-600'>
-            I started web developement in 2013 managing multiple e-commerce
-            websites on CMS platforms such as WordPress, BigCommerce, and
-            Shopify. I have experience working directly with clients and taking
-            mock wireframes all the way to deployed applications. In my spare
-            time I run Code Commerce, a Youtube channel where I teach web
-            developement and various front-end technologies.
+            I am also a community enthusiast and have worked with many student run communities
+            online. I also helped start a club on-campus and since then I have been the core lead, speaker and
+            organizer for many workshops, bootcamps and hackathons on-campus. Adding to this experience, I have also
+            worked as a community operations intern at a startup.
           </p>
           <Link href='/#projects'>
             <p className='py-2 text-gray-600 underline cursor-pointer'>

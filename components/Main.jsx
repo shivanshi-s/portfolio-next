@@ -1,5 +1,6 @@
 import React from 'react'
-import { FaGithub, FaLinkedin, FaMedium, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { SiHashnode } from 'react-icons/si'
 
 const Main = () => {
   return (
@@ -16,16 +17,16 @@ const Main = () => {
                 </p>
                 <div className='flex items-center justify-between max-w-[330px] m-auto py-4'>
                     <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                        <FaLinkedin/>
+                        <a href="https://www.linkedin.com/in/shivanshi-saxena12/" target='_blank'><FaLinkedin/></a> 
                     </div>
                     <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                        <FaGithub/>
+                        <a href="https://www.github.com/shivanshi-s/" target='_blank'><FaGithub/></a>
                     </div>
                     <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                        <FaTwitter/>
+                        <a href="https://twitter.com/whatshivanshi" target='_blank'><FaTwitter/></a> 
                     </div>
                     <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                        <FaMedium/>
+                        <a href="https://whatshivanshi.hashnode.dev/" target='_blank'><SiHashnode/></a> 
                     </div>
                 </div>
             </div>
