@@ -7,19 +7,19 @@ import { SiHashnode } from 'react-icons/si'
 const SocialIcons = () => {
     return (
       <div className="flex flex-wrap md:flex-nowrap space-x-4">
-        <a href="#">
+        <a href="https://github.com/shivanshi-s">
           <FaGithub className="m-6 text-[#5651e5]" size={60} />
         </a>
-        <a href="#">
+        <a href="https://twitter.com/whatshivanshi">
           <FaTwitter className="m-6 text-[#5651e5]" size={60} />
         </a>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/shivanshi-saxena12/">
           <FaLinkedin className="m-6 text-[#5651e5]" size={60} />
         </a>
-        <a href="#">
+        <a href="https://whatshivanshi.hashnode.dev/">
           <SiHashnode className="m-6 text-[#5651e5]" size={60} />
         </a>
-        <a href="#">
+        <a href="https://whatshivanshi.medium.com/followers">
           <FaMedium className="m-6 text-[#5651e5]" size={60} />
         </a>
       </div>
@@ -45,7 +45,7 @@ const Contact = () => {
             
             <button className=" text-white px-6 py-2 rounded-md mt-6 ml-3">
                 <FaEnvelope className="inline-block m-2" size={18} />
-                   <a href=""></a> DROP A MAIL
+                   <a href="https://twitter.com/whatshivanshi"></a> DROP A DM
             </button>
             </div>
             </div>

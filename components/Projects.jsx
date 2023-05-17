@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import propertyImg from '../public/assets/projects/property.jpg';
-import cryptoImg from '../public/assets/projects/crypto.jpg'
-import netflixImg from '../public/assets/projects/netflix.jpg'
-import twitchImg from '../public/assets/projects/twitch.jpg'
+import projectOne from '../public/assets/projects/projectOne.png'; 
+import projectTwo from '../public/assets/projects/projectTwo.png'
+import projectThree from '../public/assets/projects/projectThree.png'
+import projectFour from '../public/assets/projects/projectFour.png'
 import ProjectItem from './ProjectItem';
 
 const Projects = () => {
@@ -16,26 +16,26 @@ const Projects = () => {
             <div className='grid md:grid-cols-2 gap-8'>
 
                 <ProjectItem title="Finance Tracker App" 
-                    backgroundImg={propertyImg} 
+                    backgroundImg={projectOne} 
                     projectUrl='/projectOne' 
                     tech='React JS'
                 />
 
                 <ProjectItem
                     title='Food App UI'
-                    backgroundImg={cryptoImg}
+                    backgroundImg={projectTwo}
                     projectUrl='/projectTwo'
                     tech='React JS, Tailwind'
                 />
                 <ProjectItem
                     title='Vacation App UI'
-                    backgroundImg={netflixImg}
+                    backgroundImg={projectThree}
                     projectUrl='/projectThree'
                     tech='React JS, Tailwind'
                 />
                 <ProjectItem
                     title='Forgot to Dunk'
-                    backgroundImg={twitchImg}
+                    backgroundImg={projectFour}
                     projectUrl='/projectFour'
                     tech='Vanilla JavaScript'
                 />

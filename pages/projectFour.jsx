@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import propertyImg from '../public/assets/projects/property.jpg';
+import imageFour from '../public/assets/projects/projectFour.png';
 import { RiRadioButtonFill } from 'react-icons/ri';
 import Link from 'next/link';
 
@@ -13,12 +13,12 @@ const projectFour = () => {
           className='absolute z-1'
           layout='fill'
           objectFit='cover'
-          src={propertyImg}
+          src={imageFour}
           alt='/'
         />
         <div className='absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2'>
-          <h2 className='py-2'>Property Finders</h2>
-          <h3>React JS / Tailwind / Firebase</h3>
+          <h2 className='py-2'>Forgot to Dunk - Shooting Game</h2>
+          <h3>HTML / CSS / JavaScript</h3>
         </div>
       </div>
 
@@ -27,24 +27,17 @@ const projectFour = () => {
           <p>Project</p>
           <h2>Overview</h2>
           <p>
-            This app was built using React JS and is hosted on Firebase. Users
-            are able to search properties based on an Address, City, or ZIP code
-            to retrieve a list of active properties currently for sale. You will
-            be able to view property information as well as the specific
-            location of the property integrated with the Google Maps API. User
-            authentication is available so you can signup and signin to your
-            account with an email address in order to save your favorite
-            properties. This is made possible with Zillow API.
+          It is a simple browser game made with HTML, CSS and JavaScript made on the weekend for Slam Dunk Hacks conducted by MLH. The game is simple - hit the scared human with the ball ( take the ball's revenge of being slammed in the net all the time ) and gain a point! Try and beat your own high score, let's see how far you go!
           </p>
           <a
-            href='https://github.com/fireclint/property-finder'
+            href='https://github.com/shivanshi-s/ForgotToDunk'
             target='_blank'
             rel='noreferrer'
           >
             <button className='px-8 py-2 mt-4 mr-8'>Code</button>
           </a>
           <a
-            href='https://property-finder-development.web.app/'
+            href='https://shivanshi-s.github.io/ForgotToDunk/'
             target='_blank'
             rel='noreferrer'
           >
@@ -56,23 +49,15 @@ const projectFour = () => {
             <p className='text-center font-bold pb-2'>Technologies</p>
             <div className='grid grid-cols-3 md:grid-cols-1'>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> React
+                <RiRadioButtonFill className='pr-1' /> HTML5
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Tailwind
+                <RiRadioButtonFill className='pr-1' /> CSS3
               </p>
               <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Javascript
+                <RiRadioButtonFill className='pr-1' /> Vanilla Javascript
               </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Firebase
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Google API
-              </p>
-              <p className='text-gray-600 py-2 flex items-center'>
-                <RiRadioButtonFill className='pr-1' /> Zillow API
-              </p>
+              
             </div>
           </div>
         </div>
