@@ -1,6 +1,7 @@
 import React , {useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import navImage from '../public/assets/navLogo.png'
 import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai'
 import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
@@ -50,7 +51,7 @@ const Navbar = () => {
          className={shadow ? 'fixed w-full h-20 shadow-xl z-[100]' : 'fixed w-full h-20 z-[100]'}>
         <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
           <Link href='/'>
-          <Image src="/../public/assets/navLogo.png" alt='/' 
+          <Image src={navImage} alt='navimg' 
             width='125' 
             height='50'
             className='cursor-pointer'
@@ -87,7 +88,7 @@ const Navbar = () => {
               <div>
                   <div className='flex w-full items-center justify-between'>
                       <Link href='/'>
-                        <Image src="/../public/assets/navLogo.png" alt="logo" width={87} height={35} />
+                        <Image src={navImage} alt="logo" width={87} height={35} />
                       </Link>
                       
                       <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 cursor-pointer p-3'>
