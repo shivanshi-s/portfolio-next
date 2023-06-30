@@ -19,7 +19,7 @@ const SocialIcons = () => {
         <a href="https://whatshivanshi.hashnode.dev/">
           <SiHashnode className="m-6 text-[#5651e5]" size={60} />
         </a>
-        <a href="https://whatshivanshi.medium.com/followers">
+        <a href="https://whatshivanshi.medium.com/">
           <FaMedium className="m-6 text-[#5651e5]" size={60} />
         </a>
       </div>
